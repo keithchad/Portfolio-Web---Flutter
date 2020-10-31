@@ -6,7 +6,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // launchUrl(String url) async {
+
+   // launchUrl(String url) async {
   //  
   //   if (await canLaunch(url)) {
   //     await launch(url);
@@ -14,7 +15,6 @@ class _HomePageState extends State<HomePage> {
   //     throw 'Could not launch $url';
   //   }
   // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,34 +65,39 @@ class _HomePageState extends State<HomePage> {
               // url_launcher: ^5.4.1
               children: [
                 GestureDetector(
-                    onTap: () {
-
-                    },
-                  child: Image.asset("assets/facebook.png", width: 25.0, height: 25.0)),
+                    onTap: () {},
+                    child: Image.asset("assets/facebook.png",
+                        width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0),
                 GestureDetector(
-                  onTap: () {
-                      
-                    },
-                  child: Image.asset("assets/instagram.png", width: 25.0, height: 25.0)),
+                    onTap: () {},
+                    child: Image.asset("assets/instagram.png",
+                        width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0),
                 GestureDetector(
-                  onTap: () {
-                      
-                    },
-                  child: Image.asset("assets/linkedin.png", width: 25.0, height: 25.0)),
+                    onTap: () {},
+                    child: Image.asset("assets/linkedin.png",
+                        width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0),
                 GestureDetector(
-                  onTap: () {
-                      
-                    },
-                  child: Image.asset("assets/twitter.png", width: 25.0, height: 25.0)),
+                    onTap: () {},
+                    child: Image.asset("assets/twitter.png",
+                        width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0)
               ],
             ),
             SizedBox(height: 20.0),
             Container(
-              padding: ,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFFFFFFFF),
+                    Color(0xFF000000),
+                  ],
+                ),
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 36.0, vertical: 24.0),
               child: Text("Download my Resume"),
             )
           ],
