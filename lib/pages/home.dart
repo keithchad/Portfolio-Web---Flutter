@@ -6,15 +6,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-   // launchUrl(String url) async {
-  //  
+  // launchUrl(String url) async {
+  //
   //   if (await canLaunch(url)) {
   //     await launch(url);
   //   } else {
   //     throw 'Could not launch $url';
   //   }
   // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,58 +28,58 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                borderRadius: BorderRadius.all(Radius.circular(150.0)),
                 child: Image.asset(
                   "assets/chad.jpg",
-                  height: 100.0,
-                  width: 100.0,
+                  height: 250.0,
+                  width: 250.0,
                 )),
             SizedBox(height: 12.0),
             Text(
               "Keith Chad",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.w400),
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.w800),
             ),
-            SizedBox(height: 8.0),
+            SizedBox(height: 20.0),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 50.0),
               child: Text(
-                "Community",
+                "I am an Android Developer, Flutter Developer and Game Developer.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.white,
-                    fontWeight: FontWeight.w300),
+                    fontWeight: FontWeight.w500),
               ),
             ),
             SizedBox(height: 20.0),
             Text(
-              "Connect with me",
-              style: TextStyle(color: Colors.white, fontSize: 14.0),
+              "CONNECT WITH ME",
+              style: TextStyle(color: Colors.white, fontSize: 18.0),
             ),
             SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               // url_launcher: ^5.4.1
               children: [
-                GestureDetector(
+                InkWell(
                     onTap: () {},
                     child: Image.asset("assets/facebook.png",
                         width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0),
-                GestureDetector(
+                InkWell(
                     onTap: () {},
                     child: Image.asset("assets/instagram.png",
                         width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0),
-                GestureDetector(
+                InkWell(
                     onTap: () {},
                     child: Image.asset("assets/linkedin.png",
                         width: 50.0, height: 50.0)),
                 SizedBox(width: 12.0),
-                GestureDetector(
+                InkWell(
                     onTap: () {},
                     child: Image.asset("assets/twitter.png",
                         width: 50.0, height: 50.0)),
@@ -87,18 +87,26 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             SizedBox(height: 20.0),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFFFFFFFF),
-                    Color(0xFF000000),
-                  ],
+            InkWell(
+              onTap: () {},
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFA2834D),
+                      Color(0xFFBC9A5F),
+                    ],
+                  ),
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 36.0, vertical: 24.0),
+                child: Text(
+                  "Download my Resume",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 36.0, vertical: 24.0),
-              child: Text("Download my Resume"),
             )
           ],
         ),
